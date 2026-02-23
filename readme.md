@@ -1,12 +1,9 @@
-# C867: Scripting and Programming - Applications
-## Class Roster Migration Project
+## Class Roster Manager Project
 
 ### Author Information
 * **Name:** Robert Cessna
 * **Student ID:** 012549454
 * **Email:** rcessn1@wgu.edu
-* **Course:** C867 - Scripting and Programming Applications
-* **Date:** 02/10/2026
 
 ### Application Version
 * **Version:** 1.0
@@ -44,4 +41,5 @@ This program is a C++ console application that manages a roster of students. It 
 ### Assumptions / Additional Notes
 * **Data Parsing:** The program assumes input data is strictly formatted as comma-separated values in the specific order defined in the requirements.
 * **Memory Management:** The `Roster` destructor is implemented to manually release the memory allocated for `Student` objects to prevent memory leaks.
+
 * **Remove Function:** When a student is removed, the pointer in the array is set to `nullptr` to mark the slot as empty, ensuring subsequent traversals skip the deleted record.
