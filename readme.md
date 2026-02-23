@@ -1,44 +1,48 @@
-## Class Roster Manager Project
+# Student Roster Manager
 
-### Author Information
-* **Name:** Robert Cessna
+A C++ console application that manages a student roster system, built to demonstrate object-oriented programming principles, dynamic memory management, and structured data parsing.
 
-### Application Version
-* **Version:** 1.0
+## Overview
 
-### IDE & Compiler Info
-* **IDE Used:** Microsoft Visual Studio
-* **Compiler:** MSVC (Microsoft Visual C++)
-* **OS:** Windows
+This project simulates the migration of a legacy student record system to a modern C++ platform. The application ingests comma-delimited student data, parses it into objects, and provides a suite of roster management operations. It was developed as part of my Computer Science coursework at Western Governors University.
 
-### File Manifest
-This project includes the following source files:
-1.  `main.cpp` - The entry point of the application; handles the main program flow, parses student data, and runs test cases.
-2.  `student.h` - Header file defining the Student class structure.
-3.  `student.cpp` - Implementation file for the Student class logic.
-4.  `roster.h` - Header file defining the Roster class structure.
-5.  `roster.cpp` - Implementation file for the Roster class logic.
-6.  `degree.h` - Header file defining the DegreeProgram enumerated data type.
-7.  `README.md` - This file.
+## Key Concepts Demonstrated
 
-### Project Description
-This program is a C++ console application that manages a roster of students. It was created to demonstrate the migration of a legacy student system to a new C++ platform. The application reads a comma-delimited list of student data, parses it into objects, and performs various operations such as:
-* Adding students to the roster.
-* Removing students by ID.
-* Printing student details.
-* Validating email addresses.
-* Calculating average days in courses.
+- **Object-Oriented Design** — Modeled real-world entities using classes with clear separation of concerns across multiple files
+- **Dynamic Memory Management** — Manually allocated and deallocated heap memory; implemented a custom destructor to prevent memory leaks
+- **Data Parsing** — Parsed raw comma-delimited strings into structured Student objects at runtime
+- **Pointer Management** — Used pointer arrays to manage student records; handled deletion safely by setting freed pointers to `nullptr`
+- **Enumerated Types** — Defined a `DegreeProgram` enum to represent student degree classifications in a type-safe way
 
-### How to Run
-1.  Open the project file (`.sln`) in Visual Studio.
-2.  Ensure all source files are linked in the Solution Explorer.
-3.  Build the solution (Ctrl+Shift+B).
-4.  Run the application (Ctrl+F5).
-5.  The console window will appear and display the output of the required test cases.
+## Features
 
-### Assumptions / Additional Notes
-* **Data Parsing:** The program assumes input data is strictly formatted as comma-separated values in the specific order defined in the requirements.
-* **Memory Management:** The `Roster` destructor is implemented to manually release the memory allocated for `Student` objects to prevent memory leaks.
+- Add students to the roster
+- Remove students by ID
+- Print full roster or individual student details
+- Validate student email address formatting
+- Calculate and display average days to course completion
+- Filter and display students by degree program
 
-* **Remove Function:** When a student is removed, the pointer in the array is set to `nullptr` to mark the slot as empty, ensuring subsequent traversals skip the deleted record.
+## Project Structure
+
+| File | Description |
+|---|---|
+| `main.cpp` | Entry point; handles program flow, data parsing, and test cases |
+| `student.h` / `student.cpp` | Student class definition and implementation |
+| `roster.h` / `roster.cpp` | Roster class definition and implementation |
+| `degree.h` | DegreeProgram enumerated type |
+
+## How to Run
+
+1. Open the `.sln` file in Visual Studio
+2. Ensure all source files are included in the Solution Explorer
+3. Build the solution (`Ctrl+Shift+B`)
+4. Run without debugging (`Ctrl+F5`)
+5. Output will display in the console window
+
+## Language & Tools
+
+- **Language:** C++
+- **IDE:** Microsoft Visual Studio
+- **Compiler:** MSVC
 
