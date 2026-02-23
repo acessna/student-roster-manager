@@ -2,8 +2,6 @@
 
 ### Author Information
 * **Name:** Robert Cessna
-* **Student ID:** 012549454
-* **Email:** rcessn1@wgu.edu
 
 ### Application Version
 * **Version:** 1.0
@@ -43,3 +41,4 @@ This program is a C++ console application that manages a roster of students. It 
 * **Memory Management:** The `Roster` destructor is implemented to manually release the memory allocated for `Student` objects to prevent memory leaks.
 
 * **Remove Function:** When a student is removed, the pointer in the array is set to `nullptr` to mark the slot as empty, ensuring subsequent traversals skip the deleted record.
+
